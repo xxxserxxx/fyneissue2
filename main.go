@@ -35,14 +35,6 @@ func main() {
 		},
 	)
 	addItem := widget.NewEntry()
-	/*
-		lambda := func(val string) {
-			items = append([]string{val}, items...)
-			itemList.Refresh()
-		}
-		addItem.OnSubmitted = lambda
-		addButton := widget.NewButtonWithIcon("", theme.ContentAddIcon(), func() { lambda(addItem.Text) })
-	*/
 	addButton := widget.NewButtonWithIcon("", theme.ContentAddIcon(), func() {})
 	addRow := container.New(layout.NewBorderLayout(nil, nil, nil, addButton), addItem, addButton)
 
